@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDemoControls }) => {
       role: 'TOURIST', 
       label: 'Tourist Explorer', 
       icon: '🎒', 
-      roleTag: 'Alex Rivera', 
+      roleTag: 'Varun', 
       desc: '3D Safety Buddy, QR Pass & Offline SOS' 
     },
     { 

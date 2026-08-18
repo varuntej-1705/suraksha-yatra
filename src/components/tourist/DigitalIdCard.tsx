@@ -68,7 +68,7 @@ export const DigitalIdCard: React.FC = () => {
                 GOVERNMENT OF MEGHALAYA
               </h3>
               <p className="text-[10px] text-[var(--accent-primary)] font-bold tracking-wider uppercase">
-                Smart Tourist Safety Registry (SIH25002)
+                Smart Tourist Safety Registry
               </p>
             </div>
           </div>
@@ -97,7 +97,16 @@ export const DigitalIdCard: React.FC = () => {
             {/* Cryptographic QR Code */}
             <div className="p-2.5 rounded-2xl bg-white shadow-xl">
               <QRCodeSVG
-                value={digitalId.qrPayload}
+                value={JSON.stringify({
+                  id: digitalId.digitalIdCode,
+                  name: digitalId.fullName,
+                  nationality: digitalId.nationality,
+                  photoUrl: digitalId.photoUrl,
+                  validUntil: digitalId.tripValidityEnd,
+                  emergency: digitalId.emergencyContact,
+                  medicalInfo: digitalId.medicalInfo,
+                  authHash: digitalId.sha256Hash
+                })}
                 size={100}
                 level="M"
                 includeMargin={false}

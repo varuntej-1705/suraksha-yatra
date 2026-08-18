@@ -152,11 +152,11 @@ export const EMERGENCY_RESOURCES: EmergencyResource[] = [
 
 export const INITIAL_TOURIST: TouristProfile = {
   id: 'tourist_varun_001',
-  fullName: 'Varun Teja Rigonda',
+  fullName: 'Varun',
   nationality: 'Indian',
   passportOrIdRef: 'AADHAAR-****-9821',
   digitalId: 'TR-8F29A21-MEGH',
-  avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80',
+  avatarUrl: '/varun-profile.png',
   emergencyContact: {
     name: 'Dr. S. K. Rigonda (Father)',
     relationship: 'Father',
@@ -312,9 +312,9 @@ export const INITIAL_TRIP: Trip = {
 
 export const INITIAL_DIGITAL_ID: DigitalTouristID = {
   touristId: 'tourist_varun_001',
-  fullName: 'Varun Teja Rigonda',
+  fullName: 'Varun',
   digitalIdCode: 'TR-8F29A21-MEGH',
-  photoUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80',
+  photoUrl: '/varun-profile.png',
   nationality: 'Indian',
   destinationState: 'Meghalaya, India',
   tripValidityStart: '18 AUG 2026',
@@ -324,14 +324,14 @@ export const INITIAL_DIGITAL_ID: DigitalTouristID = {
   sha256Hash: '0x8f29a21b47c9038e914dfb02c81934e67104b2a8d11c7508e3cf219084128a1c',
   qrPayload: JSON.stringify({
     id: 'TR-8F29A21-MEGH',
-    name: 'Varun Teja Rigonda',
+    name: 'Varun',
     validUntil: '2026-08-25',
     authHash: '0x8f29a21b47c9038e914dfb02c81934e67104b2a8d11c7508e3cf219084128a1c',
-    issuer: 'Meghalaya Tourism Police Authority & SIH25002 Node',
+    issuer: 'Meghalaya Tourism Police Authority',
     emergency: '+91 94401 55678'
   }),
   isVerified: true,
-  issuer: 'Meghalaya Tourism Police & Smart Tourist Registry (SIH25002)'
+  issuer: 'Meghalaya Tourism Police & Smart Tourist Registry'
 };
 
 export const INITIAL_AUDIT_TRAIL: BlockchainAuditRecord[] = [
@@ -367,8 +367,8 @@ export const SEEDED_INCIDENTS: Incident[] = [
   {
     id: 'INC-1042',
     touristId: 'tourist_varun_001',
-    touristName: 'Varun Teja Rigonda',
-    touristPhoto: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80',
+    touristName: 'Varun',
+    touristPhoto: '/varun-profile.png',
     digitalId: 'TR-8F29A21-MEGH',
     type: 'ROUTE_DEVIATION',
     severity: 'HIGH',
