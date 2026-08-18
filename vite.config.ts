@@ -11,7 +11,7 @@ export default defineConfig(() => {
       tailwindcss(),
       VitePWA({
         registerType: 'autoUpdate',
-        includeAssets: ['varun-profile.png'],
+        includeAssets: ['app-logo.png'],
         manifest: {
           name: 'Suraksha Yatra',
           short_name: 'Suraksha Yatra',
@@ -21,12 +21,12 @@ export default defineConfig(() => {
           display: 'standalone',
           icons: [
             {
-              src: 'varun-profile.png',
+              src: 'app-logo.png',
               sizes: '192x192',
               type: 'image/png'
             },
             {
-              src: 'varun-profile.png',
+              src: 'app-logo.png',
               sizes: '512x512',
               type: 'image/png'
             }
