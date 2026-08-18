@@ -144,7 +144,7 @@ export const Navigation: React.FC = () => {
       {/* 2. Mobile Floating Glass Bottom Bar (Dribbble Style) */}
       <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[var(--surface)]/85 backdrop-blur-2xl rounded-full p-2 border border-white/10 shadow-2xl shadow-black/50 w-fit">
         <div className="flex items-center gap-1.5">
-          {navItems.slice(0, 4).map(item => {
+          {navItems.map(item => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
             return (
