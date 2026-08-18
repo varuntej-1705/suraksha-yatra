@@ -50,7 +50,7 @@ export const TouristHome: React.FC = () => {
             <span className={`font-bold ${tourist.safetyTier === 'SAFE' ? 'text-[var(--color-safe)]' : 'text-[var(--color-high)]'}`}>
               {tourist.safetyTier}
             </span>
-            <span className="text-[var(--text-muted)] font-mono text-sm ml-1">92 / 100</span>
+            <span className="text-[var(--text-muted)] font-mono text-sm ml-1">{tourist.safetyScore} / 100</span>
           </div>
           <div className="w-px h-4 bg-[var(--panel-border)]" />
           <div className="flex items-center gap-1.5 text-sm text-[var(--text-primary)]">

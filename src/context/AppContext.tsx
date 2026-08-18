@@ -176,9 +176,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setDemoSafetyStateRaw(state);
     if (state === 'SAFE') {
       setTourist(prev => ({ ...prev, safetyTier: 'SAFE', safetyScore: 92 }));
+      setWeather(INITIAL_WEATHER);
       soundEffects.playSafeChime();
     } else if (state === 'MODERATE') {
       setTourist(prev => ({ ...prev, safetyTier: 'MODERATE', safetyScore: 55 }));
+      setWeather({ tempC: 28, condition: 'HEAVY RAIN', aqi: 110, visibilityKm: 2.5, nextAlert: 'Flash floods possible in low areas' });
       soundEffects.playCautionChime();
       addToast({
         title: 'Conditions Changing',
@@ -187,6 +189,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       });
     } else if (state === 'HIGH') {
       setTourist(prev => ({ ...prev, safetyTier: 'CRITICAL', safetyScore: 12 }));
+      setWeather({ tempC: 32, condition: 'SEVERE STORM', aqi: 155, visibilityKm: 0.5, nextAlert: 'Extreme hazard. Take cover immediately.' });
       soundEffects.playAlertSiren();
       addToast({
         title: 'High Risk Detected',
