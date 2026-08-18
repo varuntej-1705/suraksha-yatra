@@ -61,11 +61,7 @@ export const TouristHome: React.FC = () => {
       </div>
 
       {/* Safety Buddy Row (Full Width) */}
-      <div className="p-6 rounded-3xl glass-panel shadow-xl overflow-hidden relative">
-        <div className="w-full h-56 rounded-2xl overflow-hidden relative border border-white/5">
-          <SafetyBuddy3D onOpenAssistant={() => {}} />
-        </div>
-      </div>
+      <SafetyBuddy3D />
 
       {/* Active Trip */}
       <div className="p-6 rounded-3xl glass-panel shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
