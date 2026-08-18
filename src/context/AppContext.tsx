@@ -143,7 +143,13 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [activeIncident, setActiveIncident] = useState<Incident | null>(SEEDED_INCIDENTS[0]);
   const [trip, setTrip] = useState<Trip>(INITIAL_TRIP);
   const [weather, setWeather] = useState<WeatherCondition>(INITIAL_WEATHER);
-  const [digitalId, setDigitalId] = useState<DigitalTouristID>(INITIAL_DIGITAL_ID);
+  const [digitalId, setDigitalId] = useState<DigitalTouristID>({
+    id: 'dig-id-01',
+    fullName: 'Varun',
+    photoUrl: '/varun-profile.png',
+    nationality: 'India',
+    digitalIdCode: 'MEG-88X-2026'
+  });
   const [auditTrail, setAuditTrail] = useState<BlockchainAuditRecord[]>(INITIAL_AUDIT_TRAIL);
   
   // Quantum result state
@@ -284,9 +290,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const newIncident: Incident = {
       id: newIncId,
       touristId: tourist.id,
-      touristName: tourist.fullName,
-      touristPhoto: tourist.avatarUrl,
-      digitalId: tourist.digitalId,
+      touristName: 'Varun',
+      touristPhoto: '/varun-profile.png',
+      digitalId: 'MEG-88X-2026',
       type: 'SOS_TRIGGER',
       severity: 'CRITICAL',
       riskScore: 98,
