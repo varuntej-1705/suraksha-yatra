@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDemoControls }) => {
     else if (role === 'GUIDE') setActiveTab('guide');
     else if (role === 'AUTHORITY') setActiveTab('authority');
     else if (role === 'RESPONDER') setActiveTab('responder');
-    else if (role === 'ADMIN') setActiveTab('admin');
+    else if (role === 'ADMIN') setActiveTab('admin-overview');
 
     addToast({
       title: `Role Switched: ${role}`,
