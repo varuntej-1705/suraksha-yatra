@@ -146,9 +146,6 @@ const MainLayout: React.FC = () => {
         </main>
       </div>
 
-      {/* Demo Controller */}
-      <DemoStateControl />
-
       {/* 3. Global Toasts */}
       <ToastContainer />
 

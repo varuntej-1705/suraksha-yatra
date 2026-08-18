@@ -21,6 +21,7 @@ import {
   Moon
 } from 'lucide-react';
 import { soundEffects } from '../../utils/audio';
+import { DemoStateControl } from './DemoStateControl';
 
 interface HeaderProps {
   onOpenDemoControls?: () => void;
@@ -189,7 +190,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDemoControls }) => {
         </div>
 
         {/* Right Navigation & Persona Actions (Bottom box on mobile) */}
-        <div className="flex items-center justify-between sm:justify-end gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar shrink-0 w-full sm:w-auto">
+        <div className="flex items-center justify-between sm:justify-end gap-1.5 sm:gap-2 flex-wrap shrink-0 w-full sm:w-auto overflow-visible">
           {/* Quick SOS Trigger Button */}
           {currentRole === 'TOURIST' && (
             <button
@@ -202,6 +203,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDemoControls }) => {
               <span className="sm:hidden">SOS</span>
             </button>
           )}
+
+          <DemoStateControl />
 
           {/* Interactive Simulation Demo Button (Hidden for Tourist) */}
           {onOpenDemoControls && currentRole !== 'TOURIST' && (
